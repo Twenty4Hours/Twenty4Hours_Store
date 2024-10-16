@@ -1,0 +1,265 @@
+:root {
+    --primary-color: #5c6bc0;
+    --secondary-color: #fff;
+    --background-color: #000;
+    --text-color: #f7f3f3;
+    --hover-opacity: 0.9;
+    --button-background: #ffffff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    background-image: url(pexels-felixmittermeier-956999.jpg);
+    background-size: cover; /* Ensures the image covers the whole page */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating if the image is small */
+}
+
+header {
+    background: rgb(2, 2, 2);
+    color: var(--text-color);
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.hero {
+    background-image:url(pexels-felixmittermeier-956999.jpg);
+   
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 50px; /* Adjust padding for better spacing */
+    height: 200px; /* Set a height to make the background visible */
+}
+
+.featured-products {
+    padding: 10px;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product {
+    background: var(--secondary-color);
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+.product:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+    transform: translateY(-5px); /* Slightly raises the card */
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.newsletter {
+    background: var(--background-color);
+    text-align: center;
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: var(--background-color);
+    color: #fff8f8;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.card-image-top {
+    background-color: black;
+    color: white;
+}
+
+.carousel-inner {
+    text-align: center;
+}
+
+#btn-shopnow {
+    border-radius: 10px;
+    background-color: var(--button-background);
+    opacity: 0.6;
+    transition: opacity 0.3s, border-radius 0.3s; /* Smooth transition */
+}
+
+#btn-shopnow:hover {
+    opacity: var(--hover-opacity);
+    border-radius: 4px;
+}
+
+.logo {
+    background-image: url(Screenshot__158_-removebg-preview\ \(1\).png);
+}
+
+.card-body1 {
+    background-color: red;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap; /* Products will wrap if there's not enough space */
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.product {
+    width: 200px; /* Adjusted the product width */
+    margin: 20px; /* Added space between products */
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 15px;
+    background-color: var(--secondary-color);
+}
+
+.product img {
+    width: 100%; /* Ensure the image fills the product card */
+    height: auto;
+}
+
+#btn-product1, #btn-product2 {
+    border-radius: 10px;
+    background-color: var(--button-background);
+    opacity: 0.7;
+    transition: opacity 0.3s, border-radius 0.3s; /* Smooth transition */
+}
+
+#btn-product1:hover, #btn-product2:hover {
+    opacity: var(--hover-opacity);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.pages {
+    color: rgb(121, 11, 11);
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+#text1{
+    color: white;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #f1f1f1;
+    margin: 0 15px;
+    font-size: 30px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #e1306c; /* Change this hover color for different effects */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product {
+        width: 90%; /* Adjust width for smaller screens */
+        margin: 20px auto; /* Center align products */
+    }
+
+    header, footer {
+        text-align: center; /* Center align header and footer content */
+    }
+
+    .hero {
+        padding: 30px; /* Adjust padding for smaller screens */
+    }
+}
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.quantity-controls button {
+    border: 1px solid #ddd;
+    background-color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.quantity {
+    margin: 0 10px;
+    font-size: 18px;
+}
+.cart-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 3px 6px;
+    font-size: 12px;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart-item {
+    margin: 10px 0; /* Add spacing between items */
+}
+
+.cart-item img {
+    width: 200px; /* Increase width for larger images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.modal-dialog {
+    max-width: 80%; /* Adjust modal size as needed */
+}
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - QR Code</title>
+    <link rel="stylesheet" href="payments.css">
+</head>
+<body>
+    <header>
+        <h1>Payment Confirmation</h1>
+    </header>
+    <main>
+        <div class="container">
+            <h2 id="text1">Total Amount Due</h2>
+            <p id="total-amount"></p>
+            <img class="qr-image" src="qr.jpg" alt="QR Code for Payment">
+            <button class="btn" onclick="confirmPayment()">Confirm Payment</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Twenty4Hours Store. All rights reserved.</p>
+    </footer>
+    <script>
+        // Set the total amount to be paid from localStorage
+        document.getElementById('total-amount').innerText = localStorage.getItem('totalAmount');
+        
+        function confirmPayment() {
+            // Redirect to a confirmation or thank you page after payment confirmation
+            window.location.href = 'thank_you.html'; // Adjust this link as needed
+        }
+    </script>
+</body>
+</html>
