@@ -263,3 +263,105 @@ footer {
     max-width: 80%; /* Adjust modal size as needed */
 }
 
+/* Navbar Styling */
+.navbar {
+    background-color: #000;
+    color: white;
+    padding: 10px 20px;
+    text-align: center; /* Center all text inside the navbar */
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  /* Flexbox Container */
+  .nav-container {
+    display: flex;
+    flex-direction: column; /* Stack logo and menu vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+  }
+  
+  /* Logo Styling */
+  .logo {
+    font-size: 24px; /* Default size for larger screens */
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px; /* Adds space between the logo and menu */
+    transition: font-size 0.3s ease; /* Smooth transition for resizing */
+    text-align: center; /* Make sure the logo text is centered */
+    width: 100%; /* Ensures the logo text remains centered */
+  }
+  
+  /* Navigation Links: Horizontal Layout */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Spacing between each menu item */
+    padding: 0;
+    margin: 0;
+    justify-content: center; /* Center the menu items */
+  }
+  
+  .nav-links li {
+    margin: 0;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #ddd; /* Hover effect */
+  }
+  
+  /* Cart Icon Styling */
+  .cart-icon {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  }
+  
+  .cart-icon a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+  }
+  
+  /* Responsive Adjustments for Logo and Menu */
+  @media (max-width: 768px) {
+    .nav-links {
+      gap: 10px; /* Reduce spacing between menu items */
+    }
+  
+    .nav-links a {
+      font-size: 16px; /* Slightly smaller font size for medium screens */
+      padding: 3px 5px; /* Reduce padding */
+    }
+  
+    /* Responsive Logo for Medium Screens */
+    .logo {
+      font-size: 20px; /* Smaller font for medium screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Responsive Logo for Small Screens */
+    .logo {
+      font-size: 16px; /* Smaller font for small mobile screens */
+    }
+  
+    .nav-links {
+      gap: 5px; /* Even less space between items */
+    }
+  }
+  .product-description {
+    font-size: 14px;
+    color: #555; /* Gray text for description */
+    margin-top: 10px;
+  }
+  
