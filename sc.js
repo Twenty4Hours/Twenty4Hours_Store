@@ -118,3 +118,30 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("zoomedImage");
+    const closeModal = document.querySelector(".close");
+    
+    // All zoomable images
+    const zoomableImages = document.querySelectorAll(".zoomable-image");
+
+    // Add event listener to each image
+    zoomableImages.forEach(img => {
+        img.addEventListener('click', function() {
+            modal.style.display = "flex";
+            modalImg.src = this.src; // Use clicked image's src for zoom
+        });
+    });
+
+    // Close the modal when the 'X' is clicked
+    closeModal.addEventListener('click', () => {
+        modal.style.display = "none";
+    });
+
+    // Close modal when user clicks outside the zoomed image
+    window.addEventListener('click', function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    });
+
