@@ -422,4 +422,63 @@ footer {
   .edition{
     color:red;
   }
+  /* Styling for the product image */
+.product-image {
+    width: 100%; /* Full width to be responsive */
+    height: auto;
+    cursor: pointer; /* Shows that the image is clickable */
+    transition: transform 0.3s; /* Smooth transition when clicked */
+}
+
+.product-image:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.9); /* Black background with opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%; /* Full-width or adjust as needed */
+    max-width: 700px;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Centering the modal image and making it responsive */
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}
+
   
