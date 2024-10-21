@@ -126,27 +126,82 @@ footer {
 .card-body1 {
     background-color: red;
 }
-
+/* General container settings */
+/* General container settings */
 .product-container {
     display: flex;
-    flex-wrap: wrap; /* Products will wrap if there's not enough space */
-    justify-content: space-around;
-    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 0 auto;
+    max-width: 1200px; /* Adjust as necessary */
 }
 
+/* Individual product styling */
 .product {
-    width: 200px; /* Adjusted the product width */
-    margin: 20px; /* Added space between products */
-    text-align: center;
-    border: 1px solid #ddd;
-    padding: 15px;
-    background-color: var(--secondary-color);
+    flex: 1 1 calc(33.333% - 20px); /* Responsive, adjusts to 3 items per row */
+    margin: 10px;
+    box-sizing: border-box;
+    overflow: hidden; /* Ensures image doesn't overflow */
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for the whole product */
 }
 
+/* Product image styling */
 .product img {
-    width: 100%; /* Ensure the image fills the product card */
-    height: auto;
+    width: 100%; /* Ensures image fills the product container */
+    height: auto; /* Keeps the aspect ratio */
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
 }
+
+/* Hover Effect - Pop-up */
+.product:hover {
+    transform: translateY(-10px); /* Move the product up slightly */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Create shadow for pop-up effect */
+}
+
+/* Hover Effect - Zoom on the image itself */
+.product img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .product {
+        flex: 1 1 calc(50% - 20px); /* 2 items per row on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        flex: 1 1 calc(100% - 20px); /* Full width for mobile */
+    }
+}
+
+/* Styling for the old price (crossed out) */
+.old-price {
+    text-decoration: line-through;
+    color: red;
+    font-size: 18px; /* Adjust size as needed */
+    margin-right: 10px; /* Add space between old and new price */
+}
+
+/* Styling for the new price (promotional) */
+.new-price {
+    color: green; /* Set the color for the promotional price */
+    font-weight: bold;
+    font-size: 20px; /* Make it larger to stand out */
+}
+
+/* Optional: Add some hover effects or transitions for styling */
+.new-price:hover {
+    color: darkgreen;
+    text-decoration: underline;
+}
+
+
+
 
 #btn-product1, #btn-product2 {
     border-radius: 10px;
@@ -363,5 +418,8 @@ footer {
     font-size: 14px;
     color: #555; /* Gray text for description */
     margin-top: 10px;
+  }
+  .edition{
+    color:red;
   }
   
